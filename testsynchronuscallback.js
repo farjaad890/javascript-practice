@@ -32,4 +32,4 @@ function multiply(x, y) {
   return x * y;
 }
 myCalculator(5, 2, "l");
-let myArray = [1, 2, 5, 8, 7, 9, 9, 3, 4, 2, 1];
+let myArray = [1, 2, 5, 8, 7, 9, 9, 3, 4, 2, 1, 10, 45, 78, 96];
