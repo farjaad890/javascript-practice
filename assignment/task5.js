@@ -1,37 +1,37 @@
-function getUser(id, callback) {
-  setTimeout(() => {
-    callback({
-      id: id,
-      name: "Hfeez",
-      age: 23,
-    });
-  }, 2000);
+//Constructor for person class
+function Person(Name, Age, Gender) {
+  this.Name = Name;
+  this.Age = Age;
+  this.Gender = Gender;
 }
-function getRepos(id, repocallback) {
-  setTimeout(() => {
-    repocallback({
-      repo_id: id,
-      name: "repo",
-    });
-  }, 2000);
+//constructor for Student class
+function Student(uni, major, name, age, gender) {
+  Person.call(this, name, age, gender);
+  this.University = uni;
+  this.Major = major;
 }
-function getCommits(commitCallback) {
-  setTimeout(() => {
-    commitCallback(["commit1", "commit2"]);
-  }, 2000);
-}
+//adding a introduce function to Person object
+Person.prototype.introduce = function () {
+  console.log(
+    `Hi my name is ${this.Name} i am ${this.Age} years old my gender is ${this.Gender}`
+  );
+};
 
-function displayCommit(commit) {
-  console.log(commit);
-}
-function displayRepo(repo) {
-  console.log(repo);
-  getCommits(displayCommit);
-}
-function displayUser(user) {
-  console.log(user);
-  getRepos(user.id, displayRepo);
-}
-console.log("Before");
-getUser(1, displayUser);
-console.log("After");
+Student.prototype = Person.prototype;
+
+//adding courses list to Student object
+Student.prototype.courses = [];
+
+//adding enroll courses function to Student object
+Student.prototype.enrollCourses = function (course) {
+  this.courses.push(course);
+};
+//adding get courses function to Student object
+Student.prototype.getCourses = function () {
+  console.log(this.courses);
+};
+
+let farjaad = new Student("UCP", "BSCS", "Farjaad", 20, "male");
+farjaad.introduce();
+farjaad.enrollCourses("ITC");
+farjaad.getCourses();

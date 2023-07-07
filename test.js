@@ -274,14 +274,70 @@
 
 // delete person.ssn;
 //----------------------------------------------------------------------------------------------------------------
-let person = {};
-person.age = 25;
-person.ssn = "012-38-9119";
+// let person = {};
+// person.age = 25;
+// person.ssn = "012-38-9119";
 
-Object.defineProperty(person, "ssn", {
-  enumerable: false,
-});
+// Object.defineProperty(person, "ssn", {
+//   enumerable: false,
+// });
 
-for (let prop in person) {
-  console.log(prop);
-}
+// for (let prop in person) {
+//   console.log(prop);
+// }
+// function getPromise(i) {
+//   return new Promise(function (resolve, reject) {
+//     setTimeout(function () {
+//       resolve({ data: i });
+//     }, 2000);
+//   });
+// }
+
+// function queryPromiseChain() {
+//   let promiseOneResult;
+//   let promiseTwoResult;
+//   getPromise(1)
+//     .then(function (result) {
+//       promiseOneResult = result.data;
+//       return getPromise(result.data + 1);
+//     })
+//     .then(function (result) {
+//       promiseTwoResult = result.data;
+//       return getPromise(result.data + 1);
+//     })
+//     .then(function (result) {
+//       console.log("First result ", promiseOneResult);
+//       console.log("Second result ", promiseTwoResult);
+//       console.log("Third result ", result.data);
+//     });
+// }
+
+// queryPromiseChain();
+const parent = {
+  value: 2,
+  method() {
+    return this.value + 1;
+  },
+};
+
+console.log(parent.method()); // 3
+// When calling parent.method in this case, 'this' refers to parent
+
+// child is an object that inherits from parent
+const child = {
+  __proto__: parent,
+};
+console.log(child.method()); // 3
+// When child.method is called, 'this' refers to child.
+// So when child inherits the method of parent,
+// The property 'value' is sought on child. However, since child
+// doesn't have an own property called 'value', the property is
+// found on the [[Prototype]], which is parent.value.
+
+child.value = 4; // assign the value 4 to the property 'value' on child.
+// This shadows the 'value' property on parent.
+// The child object now looks like:
+// { value: 4, __proto__: { value: 2, method: [Function] } }
+console.log(child.method()); // 5
+// Since child now has the 'value' property, 'this.value' means
+// child.value instead
