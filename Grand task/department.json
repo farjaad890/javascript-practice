@@ -1,0 +1,39 @@
+[
+  {
+    "id": 1,
+    "departmentName": "HR",
+    "contactNo": "03213104185",
+    "createdAt": "2023-07-16T13:08:41.162Z",
+    "updatedAt": "2023-07-16T13:08:41.162Z",
+    "employees": 0,
+    "permissions": [
+      "isCreate",
+      "isUpdate"
+    ]
+  },
+  {
+    "id": 2,
+    "departmentName": "Admin",
+    "contactNo": "03213104185",
+    "createdAt": "2023-07-16T13:08:41.166Z",
+    "updatedAt": "2023-07-16T13:08:41.166Z",
+    "employees": 0,
+    "permissions": [
+      "isCreate",
+      "isUpdate",
+      "isDelete"
+    ]
+  },
+  {
+    "id": 3,
+    "departmentName": "Dev",
+    "contactNo": "03213104185",
+    "createdAt": "2023-07-16T13:08:41.172Z",
+    "updatedAt": "2023-07-16T13:08:41.172Z",
+    "employees": 0,
+    "permissions": [
+      "isUpdate",
+      "isDelete"
+    ]
+  }
+]

@@ -6,11 +6,12 @@
 //   console.log(calculator.addition(2, 5));
 // }
 // myclaculator();
-
-const calculation = require("./functions");
-
-console.log(calculation);
-
-const result = calculation.myClaculator.division(10, 3);
-console.log(calculation.myClaculator.multiply(2, 3));
-console.log(result);
+// const calculation = require("./functions");
+// console.log(calculation);
+// const result = calculation.myClaculator.division(10, 3);
+// console.log(calculation.myClaculator.multiply(2, 3));
+// console.log(result);
+//---------------------------------------------------Second implementation------------------------------------------------------
+const { multiply, div } = require("./functions");
+console.log(multiply(2, 3));
+console.log(div(5, 6));

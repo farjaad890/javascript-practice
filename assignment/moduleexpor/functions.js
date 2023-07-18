@@ -12,11 +12,13 @@ function div(a, b) {
   return a / b;
 }
 
-const calculator = {
-  division: div,
-  multiply: multiply,
-  message: "Hello from object",
-};
-module.exports.myClaculator = calculator;
+// const calculator = {
+//   division: div,
+//   multiply: multiply,
+//   message: "Hello from object",
+// };
+// module.exports.myClaculator = calculator;
 // module.exports.exportMultiply = multiply;
 // module.exports.exportAdd = addition;
+//-------------------------------------------------Second implementation---------------------------------------------------------------
+module.exports = { multiply, div };

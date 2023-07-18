@@ -1,0 +1,40 @@
+[
+  {
+    "name": "Farjaad",
+    "age": 26,
+    "contactDetails": [
+      {
+        "phone": "03213104182",
+        "address": "Askari21"
+      }
+    ],
+    "id": 1,
+    "tokken": "xx1234xx",
+    "salary": 25000,
+    "permissions": [
+      "isCreate",
+      "isUpdate",
+      "isDelete"
+    ],
+    "departmentid": 2,
+    "createdAt": "2023-07-16T13:11:48.433Z",
+    "updatedAt": "2023-07-16T13:11:48.433Z"
+  },
+  {
+    "name": "Ali",
+    "age": 26,
+    "contactDetails": [
+      {
+        "phone": "03213104182",
+        "address": "Askari21"
+      }
+    ],
+    "id": 3,
+    "tokken": "31841c2f8e87267a",
+    "salary": 23000,
+    "permissions": [],
+    "departmentid": 3,
+    "createdAt": "2023-07-16T16:22:37.174Z",
+    "updatedAt": "2023-07-16T16:22:37.174Z"
+  }
+]
